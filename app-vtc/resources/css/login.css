@@ -1,0 +1,174 @@
+.logo-ete{
+    width: 150px;
+    height: 75PX;
+}
+
+body {
+
+    padding: 0;
+
+    margin: 0;
+
+    background-color: #eef4f7;
+
+}
+
+#login {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100vh;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.card {
+
+    background-color: #dedede;
+
+    padding: 40px;
+
+    border-radius: 2px;
+
+    width:280px;
+
+}
+
+.card-header {
+
+    padding-bottom: 50px;
+
+    opacity: 0.8;
+
+    color: black;
+
+    text-align: center;
+
+}
+
+.card-header::after {
+
+    content: "";
+
+    width: 70px;
+
+    height: 1px;
+
+    background-color: black;
+
+    display: block;
+
+    margin-top: 5px;
+
+    margin-left: 43px;
+
+}
+
+.card-content label {
+
+    color: black;
+
+    font-size: 16px;
+
+    opacity: 0.8;
+
+}
+
+.card-content-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding:10px 0;
+
+}
+
+.card-content-area input {
+
+    margin-top: 10px;
+
+    padding:0 5px;
+
+    background-color: transparent;
+
+    border:none;
+
+    border-bottom: 1px solid black;
+
+    outline: none;
+
+    color: black;
+
+}
+
+.card-footer {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.card-footer .submit{
+
+    width: 100%;
+
+    height: 40px;
+
+    background-color: #a13854;
+
+    border:none;
+
+    color:#e1e1e1;
+
+    margin: 10px 0;
+
+}
+
+.card-footer a {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    opacity: 0.8;
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+/* hr{
+    background-color: black;
+    width: 200px;
+}
+
+h4{
+    text-align: center;
+}
+
+#button-login{
+    width: 60px;
+    height: 35px;
+    margin-left: 32%;
+}
+
+label{
+    color: black;
+}
+
+input{
+    background-color: rgb(240, 240, 240);
+    border-color: rgb(240, 240, 240);
+}
+
+.card{
+    transform: translate(5%);
+} */
