@@ -15,6 +15,10 @@ CREATE TABLE enterprise (
         VARCHAR(255)
         NOT NULL
     ,
+    representative
+        VARCHAR(255)
+        NOT NULL
+    ,
     balance
         DOUBLE(10, 2)
     ,
