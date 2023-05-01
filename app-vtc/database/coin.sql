@@ -1,142 +1,169 @@
-CREATE DATABASE vtc_DB;
-USE vtc_DB;
+CREATE DATABASE vtc_database;
+
+USE vtc_database;
+
+
 
 CREATE TABLE enterprise (
-    id_ent
+    enterprise_id
         INT 
         NOT NULL 
         AUTO_INCREMENT 
         PRIMARY KEY
     , 
-    name_ent 
+    enterprise_name
         VARCHAR(255)
         NOT NULL
     ,
     balance
         DOUBLE(10, 2)
     ,
-    description_ent
+    enterprise_description
         TEXT
         NOT NULL
 );
 
 CREATE TABLE product (
-    id_prod
+    product_id
         INT 
         NOT NULL 
         AUTO_INCREMENT 
         PRIMARY KEY
     , 
-    name_prod 
+    product_name 
         VARCHAR(255)
         NOT NULL
     ,
-    value_prod
+    product_value
         DOUBLE(6, 2)
     ,
-    fk_id_ent
-        FOREIGN KEY (id_prod) REFERENCES enterprise(id_ent)
+    FK_product_enterprise
+		INT
         NOT NULL
+	,
+    FOREIGN KEY (FK_product_enterprise) REFERENCES enterprise(enterprise_id)
+
 );
 
-CREATE TABLE client (
-    id_client
-        GUID 
+CREATE TABLE `client` (
+    qrcode_guid
+		VARCHAR(32)
         NOT NULL
         PRIMARY KEY
     , 
-    name_cli 
+    client_name
         VARCHAR(255)
         NOT NULL
     ,
-    balance_client
+    client_wallet
         DOUBLE(10, 2)
     ,
-    birth_data
+    birth_date
         DATE
         NOT NULL
 );
 
-CREATE TABLE user (
-    id_user
+CREATE TABLE `user`(
+    user_id
         INT
         NOT NULL 
         AUTO_INCREMENT
         PRIMARY KEY
     ,
-    name_user
+    user_name
         VARCHAR(255)
         NOT NULL
     ,
-    office
+    occupation
         ENUM ("admin", "commission", "worker")
     ,
-    login_user
+    user_login
         VARCHAR(255)
         NOT NULL
     ,
-    password_user
+    user_password
         VARCHAR(255)
         DEFAULT "123@change"
     ,
     observation
         TEXT
     ,
-    fk_id_ent
-        FOREIGN KEY (id_user) REFERENCES enterprise(id_ent)
+    FK_user_enterprise
+		INT
+        NOT NULL
+	,
+    FOREIGN KEY (FK_user_enterprise) REFERENCES enterprise(enterprise_id)
 );
 
-CREATE TABLE pay_box (
-    id_pb
+
+
+CREATE TABLE paybox (
+    paybox_id
         INT
         NOT NULL
         AUTO_INCREMENT
         PRIMARY KEY
     ,
-    description_pb
+    paybox_description
         VARCHAR(255)
         NOT NULL
     ,
-    type_pb
+    paybox_type
         ENUM ("input", "output")
         NOT NULL
     ,
-    checking_copy
+    payment_voucher
         BLOB
         NOT NULL
     ,
-    value_pb
-        NOT NULL
+    paybox_value
         DOUBLE(8, 2)
+        NOT NULL
     ,
     date_hour
         DATETIME
         NOT NULL
     ,
-    responsible_action
+    responsible
         VARCHAR(255)
         NOT NULL
     ,
-    fk_id_ent
-        FOREIGN KEY (id_pb) REFERENCES enterprise(id_ent)
+    FK_paybox_enterprise
+		INT
+        NOT NULL
+	,
+    FK_paybox_user
+		INT
+        NOT NULL
+	,
+    
+    FOREIGN KEY (FK_paybox_enterprise) REFERENCES enterprise(enterprise_id)
     ,
-    fk_id_user
-        FOREIGN KEY (id_pb) REFERENCES user(id_user)
+    FOREIGN KEY (FK_paybox_user) REFERENCES `user`(user_id)
 );
 
 CREATE TABLE purchase (
-    id_purchase
+    purchase_id
         INT
         NOT NULL
         AUTO_INCREMENT
         PRIMARY KEY
     ,
-    fk_id_client
-        FOREIGN KEY (id_purchase) REFERENCES client(id_client)
+    FK_purchase_client
+		VARCHAR(32)
+        NOT NULL
+	,
+    FK_purchase_product
+		INT
+        NOT NULL
+	,
+    FK_purchase_paybox
+		INT
+        NOT NULL
+	,
+    FOREIGN KEY (FK_purchase_client) REFERENCES `client`(qrcode_guid)
     ,
-    fk_id_product
-        FOREIGN KEY (id_purchase) REFERENCES product(id_prod)
+    FOREIGN KEY (FK_purchase_product) REFERENCES product(product_id)
     ,
-    fk_id_pb
-        FOREIGN KEY (id_purchase) REFERENCES pay_box(id_pb)
+    FOREIGN KEY (FK_purchase_paybox) REFERENCES paybox(paybox_id)
 );
