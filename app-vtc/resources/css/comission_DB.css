@@ -1,5 +1,5 @@
 .img {
-  width: 150px;
+  width: 120px;
   height: 75PX;
 }
 
@@ -16,7 +16,7 @@
 
 .team-boxed {
   color: #313437;
-  background-color: #eef4f7;
+  background-color: #2596BE;
 }
 
 .team-boxed p {
@@ -59,8 +59,10 @@
 .team-boxed .item .box {
   text-align: center;
   padding: 30px;
-  background-color: #fff;
+  background-color: #397F98;
   margin-bottom: 30px;
+  border-radius: 8%;
+  box-shadow:  5px 5px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-boxed .item .name {
@@ -102,4 +104,12 @@
 
 .team-boxed .social a:hover {
   opacity: 1;
+}
+
+nav {
+  background-color: #1A3A4F;
+}
+
+body{
+  background-color: #2596BE;
 }

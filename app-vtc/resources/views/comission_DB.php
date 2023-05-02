@@ -6,16 +6,16 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <title>Comissão</title>
-  <link rel="stylesheet" href="../css/comission_DB.css">
+  <link rel="stylesheet" src="../css/comission_DB.css">
 
 </head>
 
 <body>
 
   <main>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+    <nav class="navbar navbar-expand-lg navbar-warning bg-#1A3A4F p-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../../public/images/ete_icon.png" class="img"></a>
+        <a class="navbar-brand" href="#"><img src="../../public/images/icon_enterprise.jpeg" class="img"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
