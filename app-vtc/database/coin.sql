@@ -2,8 +2,6 @@ CREATE DATABASE vtc_database;
 
 USE vtc_database;
 
-
-
 CREATE TABLE enterprise (
     id
         INT 
@@ -12,10 +10,6 @@ CREATE TABLE enterprise (
         PRIMARY KEY
     , 
     `name`
-        VARCHAR(255)
-        NOT NULL
-    ,
-    representative
         VARCHAR(255)
         NOT NULL
     ,
@@ -45,13 +39,13 @@ CREATE TABLE product (
 		INT
         NOT NULL
 	,
-    FOREIGN KEY (FK_product_enterprise) REFERENCES enterprise(enterprise_id)
+    FOREIGN KEY (FK_product_enterprise) REFERENCES enterprise(id)
 
 );
 
 CREATE TABLE `client` (
     guid
-		VARCHAR(32)
+		VARCHAR(36)
         NOT NULL
         PRIMARY KEY
     , 
@@ -96,7 +90,7 @@ CREATE TABLE `user`(
 		INT
         NOT NULL
 	,
-    FOREIGN KEY (FK_user_enterprise) REFERENCES enterprise(enterprise_id)
+    FOREIGN KEY (FK_user_enterprise) REFERENCES enterprise(id)
 );
 
 
@@ -141,9 +135,9 @@ CREATE TABLE paybox (
         NOT NULL
 	,
     
-    FOREIGN KEY (FK_paybox_enterprise) REFERENCES enterprise(enterprise_id)
+    FOREIGN KEY (FK_paybox_enterprise) REFERENCES enterprise(id)
     ,
-    FOREIGN KEY (FK_paybox_user) REFERENCES `user`(user_id)
+    FOREIGN KEY (FK_paybox_user) REFERENCES `user`(id)
 );
 
 CREATE TABLE purchase (
@@ -165,9 +159,9 @@ CREATE TABLE purchase (
 		INT
         NOT NULL
 	,
-    FOREIGN KEY (FK_purchase_client) REFERENCES `client`(qrcode_guid)
+    FOREIGN KEY (FK_purchase_client) REFERENCES `client`(guid)
     ,
-    FOREIGN KEY (FK_purchase_product) REFERENCES product(product_id)
+    FOREIGN KEY (FK_purchase_product) REFERENCES product(id)
     ,
-    FOREIGN KEY (FK_purchase_paybox) REFERENCES paybox(paybox_id)
+    FOREIGN KEY (FK_purchase_paybox) REFERENCES paybox(id)
 );
