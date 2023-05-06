@@ -5,13 +5,13 @@ USE vtc_database;
 
 
 CREATE TABLE enterprise (
-    enterprise_id
+    id
         INT 
         NOT NULL 
         AUTO_INCREMENT 
         PRIMARY KEY
     , 
-    enterprise_name
+    `name`
         VARCHAR(255)
         NOT NULL
     ,
@@ -22,23 +22,23 @@ CREATE TABLE enterprise (
     balance
         DOUBLE(10, 2)
     ,
-    enterprise_description
+    `description`
         TEXT
         NOT NULL
 );
 
 CREATE TABLE product (
-    product_id
+    id
         INT 
         NOT NULL 
         AUTO_INCREMENT 
         PRIMARY KEY
     , 
-    product_name 
+    `name`
         VARCHAR(255)
         NOT NULL
     ,
-    product_value
+    `value`
         DOUBLE(6, 2)
     ,
     FK_product_enterprise
@@ -50,16 +50,16 @@ CREATE TABLE product (
 );
 
 CREATE TABLE `client` (
-    qrcode_guid
+    guid
 		VARCHAR(32)
         NOT NULL
         PRIMARY KEY
     , 
-    client_name
+    `name`
         VARCHAR(255)
         NOT NULL
     ,
-    client_wallet
+    wallet
         DOUBLE(10, 2)
     ,
     birth_date
@@ -68,24 +68,24 @@ CREATE TABLE `client` (
 );
 
 CREATE TABLE `user`(
-    user_id
+    id
         INT
         NOT NULL 
         AUTO_INCREMENT
         PRIMARY KEY
     ,
-    user_name
+    `name`
         VARCHAR(255)
         NOT NULL
     ,
     occupation
         ENUM ("admin", "commission", "worker")
     ,
-    user_login
+    login
         VARCHAR(255)
         NOT NULL
     ,
-    user_password
+    `password`
         VARCHAR(255)
         DEFAULT "123@change"
     ,
@@ -102,25 +102,25 @@ CREATE TABLE `user`(
 
 
 CREATE TABLE paybox (
-    paybox_id
+    id
         INT
         NOT NULL
         AUTO_INCREMENT
         PRIMARY KEY
     ,
-    paybox_description
+    `description`
         VARCHAR(255)
         NOT NULL
     ,
-    paybox_type
+    `type`
         ENUM ("input", "output")
         NOT NULL
     ,
-    payment_voucher
+    voucher
         BLOB
         NOT NULL
     ,
-    paybox_value
+    `value`
         DOUBLE(8, 2)
         NOT NULL
     ,
@@ -147,7 +147,7 @@ CREATE TABLE paybox (
 );
 
 CREATE TABLE purchase (
-    purchase_id
+    id
         INT
         NOT NULL
         AUTO_INCREMENT
