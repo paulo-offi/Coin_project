@@ -12,6 +12,9 @@
     --color8: #bd8e27;
     --font1: 'Poppins', sans-serif;
 }
+*{
+    font-family: var(--font1);
+}
 
 body {
     background-color: var(--color3);
@@ -67,9 +70,40 @@ main {
     margin-left: 450px;
 }
 
-#right img {
-    margin-top: 135px;
-    transform: scale(95%);
+#title {
+    margin: 220px 0 0 20px;
+}
+
+#title h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#title h2{
+    font-size: 80px;
+    font-weight: 400;
+    margin: -40px 0 0 30px;
+}
+
+#subtitle{
+    margin: -20px 0 0 20px;
+}
+
+#subtitle h3 {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.hr-pai {
+    border: 2px solid black;
+    margin: 0;
+    width: 600px;
+}
+.hr-right{
+    margin-left: 40px;
+    width: 770px;
 }
 
 button {
@@ -77,19 +111,22 @@ button {
     width: 270px;
     height: 50px;
     border-radius: 10px;
-    margin-left: 200px;
+    margin-left: 300px;
     cursor: pointer;
     transition: 0.4s ease-in-out;
     margin-top: -100px;
-    font-size: x-large;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 600;
     font-family: var(--font1);
+    border: 2.5px solid black ;
     box-shadow: 0 1.5px 0 0 black;
+    margin-top: 50px;
 }
 
 button:hover {
     transform: scale(105%);
     background-color: var(--color8);
+    font-size: 28px;
 
 }
 
