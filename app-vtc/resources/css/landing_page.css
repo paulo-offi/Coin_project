@@ -71,7 +71,7 @@ main {
 }
 
 #title {
-    margin: 150px 0 0 20px;
+    margin: 220px 0 0 20px;
 }
 
 #title h1 {
@@ -105,8 +105,6 @@ main {
     margin-left: 40px;
     width: 770px;
 }
-
-
 
 button {
     background-color: var(--color7);
