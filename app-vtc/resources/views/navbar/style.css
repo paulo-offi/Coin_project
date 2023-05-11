@@ -13,15 +13,27 @@
     --font1: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: var(--color1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 20%;
+    background-color: var(--color6);
+}
+
 * {
     font-family: var(--font1);
 }
 
 body {
     margin: 0;
+    background-color: var(--color3);
 }
 
-nav {
+#navbar {
     display: flex;
     background-color: var(--color6);
 }
@@ -47,7 +59,7 @@ nav {
 }
 
 #list {
-    margin-left: 345px;
+    margin-left: 500px;
 }
 
 #list ul {
@@ -63,6 +75,7 @@ nav {
     cursor: pointer;
     color: var(--color1);
     font-weight: 600;
+    transition: 0.3s ease-in-out;
 }
 
 #user {

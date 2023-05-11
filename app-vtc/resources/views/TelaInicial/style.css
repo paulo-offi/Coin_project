@@ -44,7 +44,6 @@ main {
     height: 270px;
     width: 270px;
     border: 7px solid var(--color7);
-    
     border-radius: 50%;
     text-align: center;
     align-items: center;
