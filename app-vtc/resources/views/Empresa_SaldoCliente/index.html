@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav>
         <div id="logo">
             <img src="../../../public/images/appLogoIdeia 1.png" alt="">
-            <h1>VTC Bank<hr></h1>
+            <h1>VTC Bank
+                <hr>
+            </h1>
         </div>
         <div id="list">
             <ul>
@@ -40,17 +44,20 @@
     <main>
         <div class="title">
             <h1>Verificar Saldo do Cliente</h1>
-            <hr><hr class="hr-small">
+            <hr>
+            <hr class="hr-small">
         </div>
-        
-
-        <form action="" method="post">
-            <div id="divBusca">
-                <img src="search3.png" alt="Buscar..."/>
-                <input type="text" id="txtBusca" placeholder="Buscar..."/>
-                <button id="btnBusca">Buscar</button>
-            </div>
+        <form class="search-container">
+            <input type="text" id="search-bar" placeholder="Digite o ID do cliente">
+            <a href="#"><img class="search-icon"
+                    src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+            <hr>
+            <h2>Ou leia o QR code</h2>
+            <hr class="hr-small">
+            <button>qr code</button>
         </form>
     </main>
+    <script src="./script.js"></script>
 </body>
+
 </html>
