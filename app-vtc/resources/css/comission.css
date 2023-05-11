@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color0: #fff;
+    --color1: #a3e1e0;
+    --color2: #82eaed;
+    --color3: #2596be;
+    --color4: #1791b0;
+    --color5: #397f98;
+    --color6: #1a3b4f;
+    --color7: #e8ba55;
+    --color8: #bd8e27;
+    --font1: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: var(--color1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 20%;
+    background-color: var(--color6);
+}
+
+* {
+    font-family: var(--font1);
+}
+
+body {
+    margin: 0;
+    background-color: var(--color3);
+}
+
+#navbar {
+    display: flex;
+    background-color: var(--color6);
+}
+
+#logo {
+    display: flex;
+    margin-left: 70px;
+    color: var(--color7);
+}
+
+#logo img {
+    height: 60px;
+    width: 60px;
+    margin-top: 3px;
+    padding: 5px;
+}
+
+#logo hr {
+    margin: 0;
+    border: 2px solid var(--color7);
+    width: 140px;
+    margin-left: 20px;
+}
+
+#list {
+    margin-left: 500px;
+}
+
+#list ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-top: 13px;
+}
+
+#list li {
+    padding-left: 20px;
+    cursor: pointer;
+    color: var(--color1);
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+#user {
+    display: flex;
+    margin-left: 70px;
+    margin-top: 8px;
+    color: var(--color7);
+}
+
+#user h3 {
+    cursor: pointer;
+    font-size: medium;
+    margin-top: 20px;
+}
+
+#user img {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background-color: var(--color0);
+    border-radius: 50%;
+    margin-top: 8px;
+    padding: 5px;
+    margin-left: 13px;
+}
+
+#list ul li::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#list li:hover {
+    color: var(--color7);
+    text-decoration: underline;
+}
+
+#list ul li:hover::after {
+    width: 100%;
+}
+
+#left {
+    background-color: var(--color6);
+    position: absolute;
+    width: 450px;
+    height: 100%;
+    left: 0px;
+    top: 70px;
+    text-align: center;
+    color: var(--color1);
+}
+
+#left div {
+    height: 270px;
+    width: 270px;
+    border: 7px solid var(--color7);
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+#left div img {
+    padding: 20px;
+    height: 220px;
+    width: 220px;
+}
+
+.desc {
+    font-weight: 300;
+    margin-top: -10px;
+}
+
+#right {
+    text-align: center;
+    margin-left: 450px;
+    margin-top: 30px;
+}
+
+#billing {
+    text-align: center;
+}
+
+#billing h1 {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: -2px;
+}
+
+#billing div {
+    background-color: var(--color7);
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    margin-left: 470px;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+#billing div h2 {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.hr_short {
+    border: 1.5px solid var(--color7);
+    width: 350px;
+}
+
+.hr_long{
+    border: 1.5px solid var(--color7);
+    width: 450px;
+}
